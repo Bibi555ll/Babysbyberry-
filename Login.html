@@ -1,0 +1,61 @@
+<br></br>
+
+<center><font face="Showcard Gothic" ><font color="Black"><h1>Login</h1></font></font></center>
+<br></br>
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+            }
+            
+            .login-container {
+                width: 300px;
+                padding: 16px;
+                background-color: rgb(255, 251, 251);
+                margin: 0 auto;
+                margin-top: 100px;
+                box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+            }
+            input[type=text], input[type=password] {
+                width: 100%;
+                padding: 15px;
+                margin: 5px 0 22px 0;
+                border: none;
+                background: #f1f1f1;
+            }
+            .btn {
+                background-color: #06c00c;
+                color: white;
+                padding: 16px 20px;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+                opacity: 0.9;
+                transition: 0.3s;
+            }
+            .btn:hover {
+                opacity: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <style>
+            body {
+                background-color: rgb(252, 79, 252);
+            }
+        </style>
+        <form action="register.php" method="POST"></form>
+        <div class="login-container">
+           <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+    
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+    
+            <button type="submit" class="btn">Login</button>
+        </div>
+    </body>
+    </html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="Signup style.css">
+<link rel="stylesheet" href="Login.java">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-
+awesome/4.7.0/css/font-awesome.min.css">
+</head>
+</body>
+
+<div class="form-box">
+<h1>Sign Up Here</h1>
+
+<div class="input-box">
+<input type="firstname" placeholder="First name">
+</div>
+
+<div class="input-box">
+<input type="lastname" placeholder="Last Name">
+</div>
+
+<div class="input-box">
+<input type="email" placeholder="Email">
+</div>
+
+<div class="input-box">
+<input type="password" placeholder="Password">
+<span>
+</span>
+</div>
+<a href="website.html"><button type="button" class="login-btn">Submit</button>
+    <a href="Login.html"><button type="button" class="login-btn">Don't have an account,Login</button>
+
+
+<script>
+function myFunction()
+{
+var x = document.getElementById("myInput");
+var y = document.getElementById("hide1");
+var z = document.getElementById("hide2");
+}
+if(x.type === 'password'){
+x.type= "text";
+y.style.display="block";
+z.style.display="none";
+}
+else{
+x.type= "password";
+y.style.display="none";
+z.style.display="block";
+
+}
+</script>
+
+<script src="signup script.js"></script>
+
+</body>
+</html>
+
