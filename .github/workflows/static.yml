@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>seek coding</title>
+
+    <link rel="stylesheet" href="style1.css">
+
+    <!---we had linked our css file----->
+
+</head>
+
+<body>
+
+    <div class="full-page">
+
+        <div class="navbar">
+
+            <div>
+
+                <a href='website.html'>Homepage</a>
+
+            </div>
+
+            <nav>
+
+                <ul id='MenuItems'>
+
+                    <li><a href='Aboutus.html'>About us</a></li>
+
+                    <li><a href='Terms and Conditions.html'>Terms and conditions</a></li>
+
+                    <li><a href='youtube.html'>Youtube Channel</a></li>
+
+                    <li><a href='#'>Contact</a></li>
+
+                    <li><a href="07_dark.html">Upload Section</a></button></li>
+
+                    
+
+               
+
+                    
+
+            </nav>
+
+            
+
+
+
+
+
+            
+
+        </div>
+
+
+
+        <br>
+
+    </br>
+
+    <br>
+
+</br>
+
+
+
+        <iframe width="450" height="250" src="https://www.youtube.com/embed/tyhcvEyMi5I" title="The 20 Most Common Beginner Soccer Mistakes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+
+
+
+        <iframe width="450" height="250" src="https://www.youtube.com/embed/W24JeYoOESY" title="What Sport are you made for ? Personality Test" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+
+        <iframe width="430" height="250" src="https://www.youtube.com/embed/gISdoBJDqTo" title="Top Finishes From UFC 245 Fighters" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+            
+
+        <iframe width="450" height="250" src="https://www.youtube.com/embed/k0ftLFAJa7w" title="Kingdom Stars v Jaguars | Match Highlights | Netball League" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+    
+
+        <iframe width="450" height="250" src="https://www.youtube.com/embed/bPo4KkkTTf0" title="Reinach &amp; Mapimpi bag hat-tricks! | South Africa v Romania | Rugby World Cup 2023 Highlights" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+    
+
+        <iframe width="430" height="250" src="https://www.youtube.com/embed/TCVxHQ9Z5kk" title="Full Highlights | Australia Vs South Africa ICC World Cup 2023 Highlights | AUS Vs SA Highlights" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+    
+
+
+
+    
+
+    </div>
+
+        </div>
+
+        
+
+    </div>
+
+  
+
+
+
+
+
+</body>
+
+</html># Simple workflow for deploying static content to GitHub Pages
+name: Deploy static content to Pages
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["main"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Single deploy job since we're just deploying
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload entire repository
+          path: '.'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
